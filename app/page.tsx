@@ -1,34 +1,87 @@
-export default function Home() {
+import Image from "next/image";
+import Link from "next/link";
+import { SiteShell } from "@/components/site/SiteShell";
+import { MediaCard } from "@/components/site/MediaCard";
+
+const heroCards = [
+  {
+    title: "Command Center",
+    description: "Operating across music, AI infrastructure, creator tools, and market execution.",
+    image: "/assets/imported/adrian-swish-breland-nashville.jpg",
+    alt: "Adrian Swish in Nashville",
+  },
+  {
+    title: "Signal Stack",
+    description: "Publishing, distribution, media, and capital strategy under one premium roof.",
+    image: "/assets/imported/adrian-swish-jelly-roll-nashville.jpg",
+    alt: "Adrian Swish with collaborators in Nashville",
+  },
+  {
+    title: "Vault Access",
+    description: "A curated archive of mixtapes, panels, press, and cultural assets.",
+    image: "/assets/imported/adrian-swish-on-the-set-crips-bloods-mixtape.jpg",
+    alt: "Adrian Swish on a mixtape set",
+  },
+];
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#030407] text-white overflow-hidden">
-      <section className="relative flex min-h-screen items-center justify-center px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(25,216,255,0.14),transparent_38%),linear-gradient(180deg,#030407,#080A0F)]" />
-        <div className="relative z-10 max-w-5xl text-center">
-          <p className="mb-6 text-xs tracking-[0.45em] text-[#C9CDD2] uppercase">
-            Digital Currensy Inc. / Adrian Swish
-          </p>
-          <h1 className="text-5xl font-black tracking-[-0.06em] sm:text-7xl md:text-8xl">
-            ADRIAN SWISH
-          </h1>
-          <div className="mx-auto my-8 h-px w-48 bg-gradient-to-r from-transparent via-[#C9CDD2] to-transparent" />
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-[#D8DCE2] md:text-2xl">
-            Military discipline. Cultural intelligence. AI infrastructure.
-            Market execution.
-          </p>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#858B96] md:text-lg">
-            Building across music, artificial intelligence, blockchain, sports
-            technology, digital marketing, creator tools, media, and digital capital.
-          </p>
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href="https://adrianswish.book.kiwilaunch.com/" className="rounded-full border border-white/20 bg-white px-8 py-4 text-sm font-semibold text-black transition hover:scale-105">
-              Book Strategy Call
-            </a>
-            <a href="mailto:swish@digitalcurrensy.com" className="rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:scale-105 hover:bg-white/10">
-              Contact Adrian
-            </a>
+    <SiteShell
+      eyebrow="Command Center"
+      title="Adrian Swish — founder, operator, systems builder."
+      intro="A premium digital headquarters for music, AI, blockchain, sports technology, creator infrastructure, media, and capital strategy."
+    >
+      <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(145deg,rgba(12,14,20,0.95),rgba(7,9,14,0.92))] p-8 sm:p-10">
+          <div className="flex flex-wrap items-center gap-3 text-[0.68rem] uppercase tracking-[0.34em] text-[#19D8FF]">
+            <span className="rounded-full border border-[#19D8FF]/20 bg-[#19D8FF]/10 px-3 py-1">Digital Currensy Inc.</span>
+            <span className="text-[#6f7884]">Military discipline • Cultural intelligence • AI infrastructure</span>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="text-[0.72rem] uppercase tracking-[0.42em] text-[#6f7884]">Signal</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#f5f7fa] sm:text-4xl">
+                From culture to infrastructure, every move is operational.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#95a0ad]">
+                Adrian Swish builds teams, campaigns, music systems, AI workflows, and cultural IP that travel from concept to execution.
+              </p>
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden rounded-[24px] border border-white/10">
+              <Image src="/assets/imported/AD-BLUE-89-ADRIAN-SWISH.webp" alt="Adrian Swish portrait" fill className="object-cover" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(3,4,7,0.65)_100%)]" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="text-[0.65rem] uppercase tracking-[0.35em] text-[#19D8FF]">Now booking</p>
+                <p className="mt-3 text-xl font-semibold text-[#f5f7fa]">Book a strategic consultation and align your next move.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-[28px] border border-white/10 bg-[linear-gradient(145deg,rgba(10,12,18,0.95),rgba(6,8,12,0.92))] p-8 sm:p-10">
+          <p className="text-[0.72rem] uppercase tracking-[0.42em] text-[#19D8FF]">Core routes</p>
+          <div className="mt-6 space-y-4">
+            {[
+              ["/services", "Services"],
+              ["/ai-suite", "AI Suite"],
+              ["/mixtape-vault", "Mixtape Vault"],
+              ["/press", "Press"],
+              ["/shop", "Shop"],
+            ].map(([href, label]) => (
+              <Link key={href} href={href} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-[#19D8FF]/40 hover:bg-white/10">
+                <span className="text-lg font-medium tracking-[-0.02em] text-[#f5f7fa]">{label}</span>
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-[#6f7884]">Open</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
-    </main>
+
+      <section className="grid gap-6 md:grid-cols-3">
+        {heroCards.map((card) => (
+          <MediaCard key={card.title} {...card} />
+        ))}
+      </section>
+    </SiteShell>
   );
 }
