@@ -2,6 +2,7 @@
   "name": "adrian-swish-site",
   "version": "0.1.0",
   "private": true,
+  "description": "Official founder site for Adrian Swish — music, AI, sports tech, and Digital Currensy Inc.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

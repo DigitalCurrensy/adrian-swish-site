@@ -1,100 +1,48 @@
-# Architecture — adrian-swish-site
+# Architecture
 
-Honest map of what this repository is. Read this before adding a database, a CMS, or a second copy of the HTML.
+This repo is a Next.js 16 shell around one production HTML document.
 
----
-
-## One-sentence model
-
-Next.js 16 serves a fullscreen iframe of `public/exact/adrian-swish-website-code.html`. That HTML file is the product.
-
-```
-Browser
-  → app/[route]/page.tsx
-    → ExactHtmlFrame
-      → iframe src=/exact/adrian-swish-website-code.html
-```
-
----
-
-## Stack
-
-| Layer | What is actually in the repo |
-| --- | --- |
-| Framework | Next.js `16.2.10` (App Router) |
-| UI | React `19.2.4` + TypeScript 5 + Tailwind 4 |
-| Package manager | pnpm (`pnpm-lock.yaml` + `pnpm-workspace.yaml`) |
-| Hosting | Vercel — [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app) |
-| Database | **None** |
-| CMS | **None** |
-| Auth | **None** |
-| Env / secrets | **None required** |
-
-`package.json` scripts: `dev`, `build`, `start`, `lint`.
-
----
+It is not a CMS. It is not an API. It is not a database app.
 
 ## Request path
 
-Every public route renders the same component: `components/site/ExactHtmlFrame.tsx`.
+Browser → `app/layout.tsx` → `app/[route]/page.tsx` → `ExactHtmlFrame` → `/exact/adrian-swish-website-code.html`
 
-Routes that exist so URLs do not 404:
+Every App Router page renders the same iframe so pretty URLs do not 404. The in-page command nav moves a visitor between systems.
 
-`/`, `/about`, `/ai-suite`, `/contact`, `/cookie-notice`, `/investments`, `/media`, `/mixtape-vault`, `/newsletter`, `/nft-gallery`, `/panels`, `/philanthropy`, `/press`, `/privacy-policy`, `/projects`, `/services`, `/shop`, `/terms-of-service`, `/video-games`
+## Stack
 
-Each `app/<route>/page.tsx` is a stub that imports `ExactHtmlFrame`. In-page navigation is hash anchors inside the HTML (`#ai-suite`, `#vault`, `#contact`).
+- Next.js 16.2.10, React 19.2.4, TypeScript 5, Tailwind 4, pnpm
+- Host: Vercel — https://adrian-swish-site.vercel.app
+- Data: none. No Prisma, Drizzle, Postgres, Firestore, Redis
+- Env: none required
 
----
+## Routes
 
-## What is live vs static
+All of these render `ExactHtmlFrame`:
 
-| Feature on the site | Where the data lives | Live? |
-| --- | --- | --- |
-| Origin / bio | Hardcoded HTML | Static |
-| AI Command Stack | Hardcoded catalog + outbound links | Static page; Label IQ is live elsewhere |
-| Holdings cards | Hardcoded cards + external URLs | Static |
-| Mixtape Vault (21 projects) | HTML + images in `public/exact/` | Static |
-| Game Arcade | HTML + Remix game links | Static page; games hosted off-repo |
-| Shop | HTML catalog | Static — not a checkout |
-| Chrome Ledger NFTs | Static images | Static — not an on-chain indexer |
-| Book a call | [KiwiLaunch](https://adrianswish.book.kiwilaunch.com/) | Live, not in this repo |
-| Digital Currensy | [digitalcurrensy.com](https://www.digitalcurrensy.com) | Separate repo |
-| Label IQ AI | [app.labeliq.ai](https://app.labeliq.ai) | Separate product |
-| The U Prep | [theubasketballprepacademy.com](https://www.theubasketballprepacademy.com) | Separate repo |
+`/` `/about` `/ai-suite` `/contact` `/cookie-notice` `/investments` `/media` `/mixtape-vault` `/newsletter` `/nft-gallery` `/panels` `/philanthropy` `/press` `/privacy-policy` `/projects` `/services` `/shop` `/terms-of-service` `/video-games`
 
-This repo has no application database, CMS, or auth.
-
----
+Keep the routes. They are the stable URL surface for the rewrite.
 
 ## Components
 
-| File | Status |
-| --- | --- |
-| `components/site/ExactHtmlFrame.tsx` | Production renderer |
-| `components/site/SiteShell.tsx` | Typed, unused — intended Next rewrite |
-| `components/site/MediaCard.tsx` | Typed, unused — intended Next rewrite |
+- `components/site/ExactHtmlFrame.tsx` — production renderer
+- `components/site/SiteShell.tsx` — typed command shell, not wired
+- `components/site/MediaCard.tsx` — typed media card, not wired
 
----
+## Assets
 
-## Asset layout
+- `public/exact/` — served. Production HTML + campaign art
+- `public/assets/imported/` — served. Imported stills
+- `_incoming/full-site-code/` — not served. Duplicate of `public/exact/`
 
-| Path | Served? | Role |
-| --- | --- | --- |
-| `public/exact/` | Yes | Production HTML + campaign art |
-| `public/assets/imported/` | Yes | Second copy of many stills |
-| `_incoming/full-site-code/` | No | Duplicate of `public/exact/` |
+Pipeline today: Git → Vercel static. JP2 scans are not browser-safe. Do not delete `_incoming/` in a docs PR.
 
-JP2 scans in the tree are not browser-safe. Convert before any rewrite.
+## Data honesty
 
-Current pipeline: Git → Vercel static.
+Vault, NFT gallery, shop, and games are static HTML sections. Booking is live on KiwiLaunch. Label IQ AI is live at https://app.labeliq.ai. Digital Currensy is live at https://www.digitalcurrensy.com. The U is live at https://www.theubasketballprepacademy.com.
 
----
+## Later rewrite
 
-## Known product bugs (do not paper over)
-
-1. Hero counters in the HTML have shown placeholder zeros. Do not publish those numbers as facts.
-2. Some social URLs inside the HTML look typo'd (`iamadrianswiswish`). Canonical handles: Instagram `@iamadrianswish`, X `@IAmAdrianSwish`.
-3. Duplicate multi-MB binaries in `_incoming/` and `public/exact/`.
-4. Pretty Next routes do not deep-link to the matching hash inside the iframe.
-
-This docs pass does not delete `_incoming/` and does not rewrite the 6.9 MB HTML file.
+Replace `ExactHtmlFrame` per-route with `SiteShell` + section modules. Move large campaign art off git. Do not invent a database for static copy.
