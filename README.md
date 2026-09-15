@@ -1,17 +1,18 @@
 <p align="center">
-  <img src="docs/brand/adrian-swish-cryptopunk.svg" alt="Adrian Swish CryptoPunk" width="168">
+  <img src="docs/brand/adrian-swish-cryptopunk.jpg" alt="Adrian Swish CryptoPunk" width="196">
 </p>
 
 <h1 align="center">Adrian Swish</h1>
 
-<p align="center"><strong>Founder &nbsp;·&nbsp; Music &nbsp;·&nbsp; AI &nbsp;·&nbsp; Sports &nbsp;·&nbsp; Digital Currensy</strong></p>
+<p align="center"><strong>Founder&nbsp;&nbsp;·&nbsp;&nbsp;Music&nbsp;&nbsp;·&nbsp;&nbsp;AI&nbsp;&nbsp;·&nbsp;&nbsp;Sports&nbsp;&nbsp;·&nbsp;&nbsp;Digital Currensy</strong></p>
 
 <p align="center">
-  Official site for Adrian Swish — founder of Digital Currensy Inc. and Label IQ AI.
+  Official founder site for Adrian Swish — Digital Currensy Inc. and Label IQ AI.<br>
+  Live at <a href="https://adrianswish.xyz"><strong>adrianswish.xyz</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://adrian-swish-site.vercel.app"><strong>Live site</strong></a>
+  <a href="https://adrianswish.xyz"><strong>Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="https://adrianswish.book.kiwilaunch.com/">Book a call</a>
   &nbsp;·&nbsp;
@@ -21,107 +22,109 @@
 </p>
 
 <p align="center">
+  <a href="https://adrianswish.xyz"><img alt="Live" src="https://img.shields.io/badge/live-adrianswish.xyz-C9A227?labelColor=0B0B0B"></a>
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-black">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6">
-  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-live-white">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
 ---
 
-## What this site is for
+This is the public headquarters. Not a starter template. Not the distribution app.
 
-This is Adrian’s public headquarters. Not the company distribution app.
-
-Use it to see the work, open a holding, or book a call.
-
-**In one sentence:** open the live site, scroll the systems, book the call if you want to work together.
+Open **[adrianswish.xyz](https://adrianswish.xyz)** to walk the work, open a holding, or book time.
 
 Artist distribution and the 80/20 split live on [digitalcurrensy.com](https://www.digitalcurrensy.com).
 
 ---
 
-## Watch how to use it
+## How to use the platform
 
-The live site is the walkthrough. Step-by-step: **[docs/HOW_TO_USE.md](docs/HOW_TO_USE.md)**
+Full walkthrough: **[docs/HOW_TO_USE.md](docs/HOW_TO_USE.md)**
 
-[![Watch the Digital Currensy overview](https://img.youtube.com/vi/T4005q3Xi4I/maxresdefault.jpg)](https://www.youtube.com/watch?v=T4005q3Xi4I)
-
-| Watch | Link |
-| --- | --- |
-| Site walkthrough | [docs/HOW_TO_USE.md](docs/HOW_TO_USE.md) |
-| Company overview | [youtube.com/watch?v=T4005q3Xi4I](https://www.youtube.com/watch?v=T4005q3Xi4I) |
-| Label IQ AI | [youtube.com/watch?v=pLtealaMUD8](https://www.youtube.com/watch?v=pLtealaMUD8) |
-| Interview | [UNRESTRICTED INTERVIEW: ADRIAN SWISH](https://www.youtube.com/watch?v=f2mZS0D1xVc) |
-
----
-
-## Platform screenshots
-
-### Identity and stages
-
-<p>
-  <img src="docs/brand/adrian-swish-cryptopunk.svg" alt="Adrian Swish CryptoPunk" width="24%">
-  <img src="public/exact/ADRIAN-SWISH-NFT%20NYC.JPG" alt="Adrian Swish at NFT NYC" width="36%">
-  <img src="public/exact/LEABEL-IQ-AI.png" alt="Label IQ AI product grid" width="36%">
-</p>
-
-CryptoPunk is the mark. NFT NYC is the stage record. Label IQ AI is the live product.
-
-### Vault and campaigns
-
-<p>
-  <img src="public/exact/RMR-RASCAL.png" alt="RMR Rascal" width="32%">
-  <img src="public/exact/ICEWEAR-VEZZO-ADRIAN-SWISH-ICED-UP.png" alt="Icewear Vezzo Iced Up hosted by Adrian Swish" width="32%">
-  <img src="public/exact/XZIBIT-ADRIAN-SWISH.jpg" alt="Adrian Swish with Xzibit" width="32%">
-</p>
-
-Vault work includes RMR *Rascal*, Icewear Vezzo *Iced Up*, Kid Ink, Peezy, Vory, Prince Chrishan, and Comptonfornia.
-
-### Sports and community
-
-<p>
-  <img src="public/exact/THE-U-BASKETBALL-PREP.png" alt="The U Basketball Prep Academy" width="48%">
-  <img src="public/exact/DCI-EVENT.JPG" alt="Digital Currensy Inc. event" width="48%">
-</p>
-
----
-
-## How a visitor uses the platform
-
-1. Open [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app).
-2. Use COMMAND: Home, AI, Shop, Games, Contact — or scroll Systems 00–14.
-3. Jump to a live product: [digitalcurrensy.com](https://www.digitalcurrensy.com) or [app.labeliq.ai](https://app.labeliq.ai).
-4. Book [adrianswish.book.kiwilaunch.com](https://adrianswish.book.kiwilaunch.com/).
+1. Open **[adrianswish.xyz](https://adrianswish.xyz)**.
+2. Use **COMMAND** — Home, AI, Shop, Games, Contact — or scroll Systems 00–14.
+3. Jump to a live product when you need one: [digitalcurrensy.com](https://www.digitalcurrensy.com) or [app.labeliq.ai](https://app.labeliq.ai).
+4. Book **[adrianswish.book.kiwilaunch.com](https://adrianswish.book.kiwilaunch.com/)**.
 5. Or email [swish@digitalcurrensy.com](mailto:swish@digitalcurrensy.com). Press subject: `PRESS`.
 
-| You click | What it does |
+| You click | What happens |
 | --- | --- |
 | **Book a Call** | Opens KiwiLaunch |
-| **AI** | AI Command Stack |
+| **AI** | AI Command Stack on this site |
 | **Shop** | Digital products |
 | **Games** | Arcade |
 | **Contact** | Email + intake |
-| **Company / Label IQ links** | Live products off this site |
-
-Full walkthrough: [docs/HOW_TO_USE.md](docs/HOW_TO_USE.md)
+| **Digital Currensy / Label IQ** | Live products off this site |
 
 ---
 
-## What is on the site
+## Watch
 
-| System | Section | What you get |
+[![Digital Currensy — how the company platform works](https://img.youtube.com/vi/T4005q3Xi4I/maxresdefault.jpg)](https://www.youtube.com/watch?v=T4005q3Xi4I)
+
+| Tape | Link |
+| --- | --- |
+| How Digital Currensy works | [Essential Guide](https://www.youtube.com/watch?v=T4005q3Xi4I) |
+| Label IQ AI | [Product video](https://www.youtube.com/watch?v=pLtealaMUD8) |
+| Founder interview | [UNRESTRICTED INTERVIEW: ADRIAN SWISH](https://www.youtube.com/watch?v=f2mZS0D1xVc) |
+
+---
+
+## Platform
+
+The CryptoPunk at the top of this README is the identity mark — Adrian’s actual punk, listed in **Chrome Ledger** on the site.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="public/exact/LEABEL-IQ-AI.png" alt="Label IQ AI product grid">
+      <br><sub>Label IQ AI — live at <a href="https://app.labeliq.ai">app.labeliq.ai</a></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="public/exact/ADRIAN-SWISH-NFT%20NYC.JPG" alt="Adrian Swish at NFT NYC">
+      <br><sub>NFT NYC — stages and signals</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="public/exact/RMR-RASCAL.png" alt="RMR Rascal">
+      <br><sub>Vault — RMR <em>Rascal</em></sub>
+    </td>
+    <td align="center">
+      <img src="public/exact/ICEWEAR-VEZZO-ADRIAN-SWISH-ICED-UP.png" alt="Icewear Vezzo Iced Up hosted by Adrian Swish">
+      <br><sub>Vault — Icewear Vezzo <em>Iced Up</em></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="public/exact/THE-U-BASKETBALL-PREP.png" alt="The U Basketball Prep Academy">
+      <br><sub>The U Basketball Prep Academy</sub>
+    </td>
+    <td align="center">
+      <img src="public/exact/DCI-EVENT.JPG" alt="Digital Currensy Inc. event">
+      <br><sub>Digital Currensy — community</sub>
+    </td>
+  </tr>
+</table>
+
+Vault also includes Kid Ink, Peezy, Vory, Prince Chrishan, Comptonfornia, and the rest of the 21-project record.
+
+---
+
+## What’s on the site
+
+| # | Section | What you get |
 | --- | --- | --- |
-| 00 | The Network | How the verticals connect |
-| 01 | Origin Protocol | Background and operating thesis |
+| 00 | Command Center | Hero and booking |
+| 01 | Origin Protocol | Background |
 | 02 | Strategic Services | Who Adrian works with |
 | 03 | AI Command Stack | Music, marketing, legal, sports, creator tools |
-| 04 | Strategic Holdings | DCI · Label IQ AI · The U Prep · Sixth Man VR |
+| 04 | Strategic Holdings | DCI · Label IQ AI · The U Prep · Sixth Man |
 | 05 | The Vault | 21 mixtape / campaign projects |
 | 06 | Media Universe | Books, whitepaper, publications |
 | 07 | Game Arcade | 11 original games |
 | 08 | Shop | Digital products and merch |
-| 09 | Chrome Ledger | NFT / collectible gallery |
+| 09 | Chrome Ledger | NFT / collectible gallery — including this CryptoPunk |
 | 10 | Impact Ledger | Philanthropy record |
 | 11 | Stages & Signals | Panels and talks |
 | 12 | Press Room | Coverage |
@@ -137,13 +140,23 @@ Full walkthrough: [docs/HOW_TO_USE.md](docs/HOW_TO_USE.md)
 
 ---
 
-## What this repository is
+## This repository
 
-A Next.js 16 shell around the production HTML document at `/exact/adrian-swish-website-code.html`. Pretty routes exist so URLs do not 404. They all load that same document.
+Next.js 16 shell around one production HTML document. Pretty URLs (`/ai-suite`, `/shop`, `/contact`) load that same page so they do not 404.
 
-This repo is not a CMS, not an API, and not a database. Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+| Surface | URL |
+| --- | --- |
+| **Live site** | **[adrianswish.xyz](https://adrianswish.xyz)** |
+| Company | [digitalcurrensy.com](https://www.digitalcurrensy.com) |
+| Label IQ AI | [app.labeliq.ai](https://app.labeliq.ai) |
+| Booking | [adrianswish.book.kiwilaunch.com](https://adrianswish.book.kiwilaunch.com/) |
 
-### Run locally
+Not a CMS. Not an API. Not a database. Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
+<details>
+<summary><strong>Run locally</strong></summary>
+
+Node 20+ and [pnpm](https://pnpm.io).
 
 ```bash
 git clone https://github.com/DigitalCurrensy/adrian-swish-site.git
@@ -152,27 +165,33 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Node 20+ and [pnpm](https://pnpm.io).
+Visitor-facing copy lives in `public/exact/adrian-swish-website-code.html`. Wrapper and tab title: `components/site/ExactHtmlFrame.tsx` and `app/layout.tsx`.
 
 `pnpm build` · `pnpm start` · `pnpm lint`
+
+No `.env`. No database URL. No API keys.
+
+</details>
 
 ---
 
 ## Related repos
 
-- [dci-website](https://github.com/DigitalCurrensy/dci-website) — Digital Currensy Inc.
+- [dci-website](https://github.com/DigitalCurrensy/dci-website) — Digital Currensy Inc. public site
 - [first-bucket-studios](https://github.com/DigitalCurrensy/first-bucket-studios) — basketball pack opener
-- [ICEWEAR-VEZZO-ROP4-WEBSITE](https://github.com/DigitalCurrensy/ICEWEAR-VEZZO-ROP4-WEBSITE) — richoffpints.com
+- [ICEWEAR-VEZZO-ROP4-WEBSITE](https://github.com/DigitalCurrensy/ICEWEAR-VEZZO-ROP4-WEBSITE) — [richoffpints.com](https://richoffpints.com)
 
 ---
 
 ## Contact
 
-- Site: [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app)
-- Email: [swish@digitalcurrensy.com](mailto:swish@digitalcurrensy.com)
-- Booking: [adrianswish.book.kiwilaunch.com](https://adrianswish.book.kiwilaunch.com/)
-- Instagram: [@iamadrianswish](https://instagram.com/iamadrianswish)
-- X: [@IAmAdrianSwish](https://x.com/IAmAdrianSwish)
-- LinkedIn: [/in/adrianswish](https://www.linkedin.com/in/adrianswish/)
+| | |
+| --- | --- |
+| **Site** | **[adrianswish.xyz](https://adrianswish.xyz)** |
+| Email | [swish@digitalcurrensy.com](mailto:swish@digitalcurrensy.com) |
+| Booking | [adrianswish.book.kiwilaunch.com](https://adrianswish.book.kiwilaunch.com/) |
+| Instagram | [@iamadrianswish](https://instagram.com/iamadrianswish) |
+| X | [@IAmAdrianSwish](https://x.com/IAmAdrianSwish) |
+| LinkedIn | [linkedin.com/in/adrianswish](https://www.linkedin.com/in/adrianswish/) |
 
 © 2026 Adrian Swish / Digital Currensy Inc.

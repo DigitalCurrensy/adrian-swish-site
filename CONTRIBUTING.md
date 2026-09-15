@@ -4,6 +4,8 @@ This is the public founder site for Adrian Swish. Keep changes small, typed, and
 
 ## Ground rules
 
+- Public URL is **[adrianswish.xyz](https://adrianswish.xyz)**. Do not publish `*.vercel.app` as the contact / live link.
+- Identity mark is Adrian’s actual CryptoPunk at `docs/brand/adrian-swish-cryptopunk.jpg` and `public/brand/adrian-swish-cryptopunk.jpg`. Do not substitute mixtape art or a reconstructed SVG.
 - The live page is `public/exact/adrian-swish-website-code.html`.
 - Every `app/*/page.tsx` currently iframes that file through `ExactHtmlFrame`. Do not invent per-route React pages unless you are doing the planned rewrite.
 - `components/site/SiteShell.tsx` and `components/site/MediaCard.tsx` are the rewrite primitives. They are not production yet.

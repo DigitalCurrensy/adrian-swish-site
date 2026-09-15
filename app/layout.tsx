@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.adrianswish.xyz"),
   title: "Adrian Swish — Founder · Music · AI · Sports · Capital",
   description:
     "Official founder site for Adrian Swish — music, AI, sports tech, and Digital Currensy Inc. Book a call, walk the vault, or open Label IQ AI.",
@@ -22,17 +23,33 @@ export const metadata: Metadata = {
     "Adrian Swish",
     "Digital Currensy",
     "Label IQ AI",
+    "adrianswish.xyz",
     "music executive",
     "sports tech",
     "founder",
   ],
+  alternates: {
+    canonical: "https://adrianswish.xyz",
+  },
+  icons: {
+    icon: "/brand/adrian-swish-cryptopunk.jpg",
+    apple: "/brand/adrian-swish-cryptopunk.jpg",
+  },
   openGraph: {
     title: "Adrian Swish — Founder · Music · AI · Sports · Capital",
     description:
       "Official founder site for Adrian Swish — music, AI, sports tech, and Digital Currensy Inc.",
-    url: "https://adrian-swish-site.vercel.app",
+    url: "https://adrianswish.xyz",
     siteName: "Adrian Swish",
     type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Adrian Swish — adrianswish.xyz",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -40,6 +57,7 @@ export const metadata: Metadata = {
     description:
       "Official founder site for Adrian Swish — music, AI, sports tech, and Digital Currensy Inc.",
     creator: "@IAmAdrianSwish",
+    images: ["/og.jpg"],
   },
 };
 

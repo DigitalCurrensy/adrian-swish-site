@@ -1,6 +1,6 @@
 # How to use the Adrian Swish site
 
-Live site: [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app)
+Live site: **[adrianswish.xyz](https://adrianswish.xyz)**
 
 Two modes: visitor and developer.
 
@@ -12,26 +12,26 @@ Open the live site. That is the product.
 
 ### 1. Land on Command Center
 
-Open [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app).
+Open **[adrianswish.xyz](https://adrianswish.xyz)**.
 
 You should see the founder hub and the command nav: Home, AI, Shop, Games, Contact, Book a Call.
 
-The real document is `/exact/adrian-swish-website-code.html`. Pretty Next URLs all load that same document.
+The identity mark is Adrian’s CryptoPunk. The real document is `/exact/adrian-swish-website-code.html`. Pretty Next URLs all load that same document.
 
 ### 2. Scroll the systems
 
 | System | Section | Do this |
 | --- | --- | --- |
-| 00 | The Network | Read how music, AI, sports, and capital connect |
+| 00 | Command Center | Book, or start the walk |
 | 01 | Origin Protocol | Background and operating thesis |
 | 02 | Strategic Services | Decide if you are hiring consulting, campaigns, or a build |
-| 03 | AI Command Stack | Review the stack, then open [app.labeliq.ai](https://app.labeliq.ai) for the live product |
+| 03 | AI Command Stack | Review the stack, then open [app.labeliq.ai](https://app.labeliq.ai) |
 | 04 | Strategic Holdings | DCI, Label IQ AI, The U Prep, Sixth Man |
 | 05 | The Vault | Campaign and mixtape record |
 | 06 | Media Universe | Books and publications |
 | 07 | Game Arcade | Play the Remix games |
 | 08 | Shop | Digital products |
-| 09 | Chrome Ledger | NFT / collectible stills |
+| 09 | Chrome Ledger | NFT / collectible stills, including the CryptoPunk |
 | 10 | Impact Ledger | Philanthropy record |
 | 11 | Stages & Signals | Talks and panels |
 | 12 | Press Room | Coverage |
@@ -61,7 +61,7 @@ The live site is the interactive walkthrough. These videos are the recorded cont
 
 [![Digital Currensy overview](https://img.youtube.com/vi/T4005q3Xi4I/maxresdefault.jpg)](https://www.youtube.com/watch?v=T4005q3Xi4I)
 
-- [Digital Currensy overview](https://www.youtube.com/watch?v=T4005q3Xi4I)
+- [How Digital Currensy works](https://www.youtube.com/watch?v=T4005q3Xi4I)
 - [Label IQ AI](https://www.youtube.com/watch?v=pLtealaMUD8)
 - [UNRESTRICTED INTERVIEW: ADRIAN SWISH](https://www.youtube.com/watch?v=f2mZS0D1xVc)
 
@@ -114,6 +114,7 @@ No `.env` file. No database URL. No API keys.
 | What visitors see | `public/exact/adrian-swish-website-code.html` |
 | The iframe wrapper | `components/site/ExactHtmlFrame.tsx` |
 | Browser tab title / SEO | `app/layout.tsx` |
+| Brand / OG image | `public/brand/` and `public/og.jpg` |
 | A pretty URL that should not 404 | `app/<route>/page.tsx` — keep rendering `ExactHtmlFrame` until the rewrite |
 | Docs | `README.md`, `docs/HOW_TO_USE.md`, `docs/ARCHITECTURE.md` |
 
@@ -125,14 +126,15 @@ Every App Router page renders `ExactHtmlFrame`, which iframes `/exact/adrian-swi
 
 ### Deploy
 
-Push to `main`. Vercel builds from this repo. Production URL: [adrian-swish-site.vercel.app](https://adrian-swish-site.vercel.app).
+Push to `main`. Vercel builds from this repo. Production domain: **[adrianswish.xyz](https://adrianswish.xyz)**.
 
 ---
 
 ## Socials that are correct
 
-Use these. Do not copy typo'd handles out of the HTML dump.
+Use these. Do not copy typo’d handles out of the HTML dump.
 
+- Site: [adrianswish.xyz](https://adrianswish.xyz)
 - Instagram: [@iamadrianswish](https://instagram.com/iamadrianswish)
 - X: [@IAmAdrianSwish](https://x.com/IAmAdrianSwish)
 - LinkedIn: [linkedin.com/in/adrianswish](https://www.linkedin.com/in/adrianswish/)

@@ -13,7 +13,8 @@ Every App Router page renders the same iframe so pretty URLs do not 404. The in-
 ## Stack
 
 - Next.js 16.2.10, React 19.2.4, TypeScript 5, Tailwind 4, pnpm
-- Host: Vercel — https://adrian-swish-site.vercel.app
+- Host: Vercel
+- Production domain: **https://adrianswish.xyz** (www canonical)
 - Data: none. No Prisma, Drizzle, Postgres, Firestore, Redis
 - Env: none required
 
@@ -34,7 +35,10 @@ Keep the routes. They are the stable URL surface for the rewrite.
 ## Assets
 
 - `public/exact/` — served. Production HTML + campaign art
+- `public/brand/` — served. Identity mark (CryptoPunk) and share card
+- `public/og.jpg` — Open Graph image
 - `public/assets/imported/` — served. Imported stills
+- `docs/brand/` — README / docs identity (same CryptoPunk)
 - `_incoming/full-site-code/` — not served. Duplicate of `public/exact/`
 
 Pipeline today: Git → Vercel static. JP2 scans are not browser-safe. Do not delete `_incoming/` in a docs PR.
