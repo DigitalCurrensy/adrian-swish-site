@@ -10,7 +10,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.10",
+    "next": "16.4.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -20,8 +20,16 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.4.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.35.5",
+      "js-yaml": "4.3.2",
+      "source-map-js": "1.2.2",
+      "browserslist": "4.29.5"
+    }
   }
 }
