@@ -1,0 +1,260 @@
+/* Vol. 13 letter. Tokens mirror public/exact/adrian-swish-website-code.html. */
+.page {
+  --midnight: #030407;
+  --carbon: #11141b;
+  --chrome: #c9cdd2;
+  --liquid: #eef2f5;
+  --cyan: #19d8ff;
+  --line: rgba(201, 205, 210, 0.14);
+
+  flex: 1;
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(60, 123, 255, 0.12), transparent 60%),
+    var(--midnight);
+  color: var(--liquid);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 380;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+
+.page ::selection {
+  background: var(--cyan);
+  color: var(--midnight);
+}
+
+/* ---------- top bar ---------- */
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.brand {
+  font-stretch: 118%;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--liquid);
+  padding: 10px 0;
+}
+
+.subscribe {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(25, 216, 255, 0.45);
+  border-radius: 2px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.subscribe:hover {
+  background: var(--cyan);
+  color: var(--midnight);
+}
+
+.page a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* ---------- letter ---------- */
+.letter {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(28px, 7vw, 72px) 20px 24px;
+  font-size: clamp(1.03rem, 0.98rem + 0.25vw, 1.14rem);
+  line-height: 1.72;
+  overflow-wrap: break-word;
+}
+
+.letter h1 {
+  font-stretch: 112%;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 1.3rem + 4.6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  background: linear-gradient(
+    175deg,
+    #fdfeff 0%,
+    #cfd4da 22%,
+    #8a929c 40%,
+    #e9edf1 52%,
+    #5c646e 68%,
+    #d7dce1 84%,
+    #f4f7fa 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 0.08em;
+}
+
+.subtitle {
+  margin-top: 22px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  color: var(--cyan);
+}
+
+.letter h2 {
+  margin-top: 1.9em;
+  font-stretch: 108%;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.15rem + 1.2vw, 1.95rem);
+  line-height: 1.16;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+  color: #fff;
+}
+
+/* Two-line Substack headings ("The Reset:" + next line) sit tight together. */
+.letter h2 + h2 {
+  margin-top: 0.15em;
+}
+
+.letter hr + h2 {
+  margin-top: 0;
+}
+
+.letter p,
+.letter ul {
+  margin-top: 1.15em;
+}
+
+.letter strong {
+  font-weight: 680;
+  color: #fff;
+}
+
+.letter em {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.letter code {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.86em;
+  padding: 0.12em 0.4em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--carbon);
+  color: var(--chrome);
+  overflow-wrap: anywhere;
+}
+
+.letter a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-decoration-color: rgba(25, 216, 255, 0.4);
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.letter a:hover {
+  text-decoration-color: var(--cyan);
+}
+
+.letter ul {
+  list-style: none;
+  display: grid;
+  gap: 0.7em;
+}
+
+.letter li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.letter li::before {
+  content: "";
+  position: absolute;
+  left: 0.2em;
+  top: 0.72em;
+  width: 0.6em;
+  height: 1px;
+  background: var(--cyan);
+}
+
+.letter hr {
+  margin: clamp(40px, 7vw, 64px) 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line) 18%, var(--line) 82%, transparent);
+}
+
+/* ---------- images (no captions, as on Substack) ---------- */
+.figure,
+.logo {
+  margin-top: 1.6em;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--carbon);
+}
+
+.logo img {
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 72px;
+  border-top: 1px solid var(--line);
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--chrome);
+}
+
+.home:hover {
+  color: #fff;
+}
+
+@media (max-width: 420px) {
+  .brand {
+    letter-spacing: 0.18em;
+  }
+
+  .subscribe {
+    padding: 0 12px;
+    letter-spacing: 0.08em;
+  }
+}
