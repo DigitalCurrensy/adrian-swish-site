@@ -55,9 +55,10 @@ const OG_IMAGE = {
   alt: images["01"].alt,
 };
 
+// Self-referencing canonical: this site page is the original. Substack and
+// Medium should point their canonical tags here after they publish.
 // TODO(go-live): set to the public Substack post URL
-// (https://valuecompute.substack.com/p/...) once the post is published, then
-// uncomment `canonical` in `metadata.alternates` below.
+// (https://valuecompute.substack.com/p/...) once the post is published.
 // const SUBSTACK_POST_URL = "";
 
 // TODO(go-live): set to the Medium version of this letter, then uncomment the
@@ -72,11 +73,10 @@ export const metadata: Metadata = {
   title: `${HEADLINE} | Adrian Swish`,
   description: DESCRIPTION,
   authors: [{ name: "Adrian Swish", url: "https://adrianswish.xyz" }],
-  // An empty object clears the site-wide canonical inherited from
-  // app/layout.tsx (which points at the home page). No canonical tag is
-  // emitted for this page until the Substack URL is known.
+  // Overrides the site-wide canonical inherited from app/layout.tsx
+  // (which points at the home page) with this page's own URL.
   alternates: {
-    // canonical: SUBSTACK_POST_URL,
+    canonical: PAGE_URL,
   },
   openGraph: {
     type: "article",
