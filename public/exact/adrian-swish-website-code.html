@@ -1171,7 +1171,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <a href="https://www.imdb.com/name/nm5322067/" target="_blank" rel="noopener">IMDB <span>nm5322067</span></a>
       </div>
     </div>
-    <form class="intake rv" id="intakeForm" novalidate>
+    <form class="intake rv" id="intakeForm" action="mailto:swish@digitalcurrensy.com" method="post" enctype="text/plain" novalidate>
       <div class="field"><label for="fName">FULL NAME *</label><input id="fName" name="name" required autocomplete="name"></div>
       <div class="field"><label for="fOrg">COMPANY / ORGANIZATION</label><input id="fOrg" name="org" autocomplete="organization"></div>
       <div class="field"><label for="fEmail">EMAIL *</label><input id="fEmail" type="email" name="email" required autocomplete="email"></div>
@@ -1187,7 +1187,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <div class="field full"><label for="fBuild">WHAT ARE YOU TRYING TO BUILD? *</label><textarea id="fBuild" name="build" required></textarea></div>
       <div class="field full"><label for="fWhy">WHY ADRIAN?</label><textarea id="fWhy" name="why"></textarea></div>
       <label class="consent"><input type="checkbox" required id="fConsent"> I consent to being contacted about this inquiry and confirm this is a serious business request.</label>
-      <span class="form-note" id="formNote">â MESSAGE RECEIVED â ADRIAN’S TEAM WILL REVIEW THE OPPORTUNITY AND RESPOND IF ALIGNED.</span>
+      <span class="form-note" id="formNote" role="status" aria-live="polite"></span>
+      <div class="field full" id="formCopyWrap" style="display:none"><button class="btn wire" type="button" id="formCopy" style="justify-content:center">Copy My Message</button></div>
       <div class="field full"><button class="btn solid" type="submit" style="justify-content:center">Submit To Command <span class="arrow">→</span></button></div>
     </form>
   </div>
@@ -1855,13 +1856,46 @@ const statsEl=document.getElementById("stats");if(statsEl)statsIO.observe(statsE
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){gameModal.classList.remove("open");lb.classList.remove("open")}});
 
 /* ============ FORM ============ */
-document.getElementById("intakeForm").addEventListener("submit",e=>{
-  e.preventDefault();const f=e.target;
-  if(!f.checkValidity()){f.reportValidity();return}
-  document.getElementById("formNote").style.display="block";
-  f.querySelector("button[type=submit]").textContent="RECEIVED ✓";
-  f.querySelectorAll("input,select,textarea,button").forEach(el=>el.disabled=true);
-});
+/* Contact form: no backend exists, so it hands the message to the visitor's own
+   email app (mailto to the address already shown on this page). It never claims the
+   message was received; the visitor still presses Send in their email app. */
+(function(){
+  const TO="swish@digitalcurrensy.com";
+  const f=document.getElementById("intakeForm");
+  const note=document.getElementById("formNote");
+  const copyWrap=document.getElementById("formCopyWrap");
+  const copyBtn=document.getElementById("formCopy");
+  const btn=f.querySelector("button[type=submit]");
+  let lastBody="";
+  function show(msg,isError){note.textContent=msg;note.style.display="block";note.style.color=isError?"#ff6b6b":"";note.dataset.state=isError?"error":"handoff"}
+  function val(id){const el=document.getElementById(id);return (el&&el.value||"").trim()}
+  f.addEventListener("submit",e=>{
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();show("PLEASE FILL IN THE REQUIRED FIELDS (*) AND TICK THE CONSENT BOX.",true);return}
+    const type=val("fType"),name=val("fName");
+    const subject="Executive Intake: "+type+" | "+name;
+    lastBody=["Name: "+name,"Company / Organization: "+val("fOrg"),"Email: "+val("fEmail"),"Role / Title: "+val("fRole"),"Inquiry type: "+type,"Budget range: "+val("fBudget"),"","What are you trying to build?",val("fBuild"),"","Why Adrian?",val("fWhy"),"","(Sent from the intake form on adrianswish.xyz)"].join("\n");
+    let body=lastBody;
+    let url="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    let trimmed=false;
+    while(url.length>1900&&body.length>200){body=body.slice(0,Math.floor(body.length*0.85));trimmed=true;url="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body+"\n\n[Message shortened. Full text pasted below.]")}
+    try{
+      const a=document.createElement("a");a.href=url;a.target="_top";a.rel="noopener";
+      document.body.appendChild(a);a.click();a.remove();
+    }catch(err){
+      show("COULD NOT OPEN YOUR EMAIL APP. PLEASE EMAIL "+TO+" DIRECTLY. USE \"COPY MY MESSAGE\" BELOW.",true);
+      copyWrap.style.display="block";return;
+    }
+    show("NOT SENT YET: YOUR EMAIL APP SHOULD NOW BE OPEN WITH THIS INQUIRY ADDRESSED TO "+TO+". PRESS SEND THERE."+(trimmed?" YOUR MESSAGE WAS LONG, SO PASTE THE FULL TEXT (COPY MY MESSAGE) INTO THE EMAIL.":"")+" IF NOTHING OPENED, EMAIL "+TO+" DIRECTLY.",false);
+    btn.innerHTML="Open Email Again <span class=\"arrow\">→</span>";
+    copyWrap.style.display="block";
+  });
+  copyBtn.addEventListener("click",()=>{
+    const done=()=>{copyBtn.textContent="Copied ✓"};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(lastBody).then(done,()=>{copyBtn.textContent="Copy failed: select and copy the fields above"})}
+    else{copyBtn.textContent="Copy not supported: select and copy the fields above"}
+  });
+})();
 </script>
 </body>
 </html>
