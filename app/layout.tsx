@@ -44,10 +44,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og.jpg",
+        url: "https://www.adrianswish.xyz/og/swish-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Adrian Swish — adrianswish.xyz",
+        alt: "SWISH chrome wordmark on black for Adrian Swish at adrianswish.xyz",
+        type: "image/jpeg",
       },
     ],
   },
@@ -57,7 +58,15 @@ export const metadata: Metadata = {
     description:
       "Official founder site for Adrian Swish — music, AI, sports tech, and Digital Currensy Inc.",
     creator: "@IAmAdrianSwish",
-    images: ["/og.jpg"],
+    images: [
+      {
+        url: "https://www.adrianswish.xyz/og/swish-og.jpg",
+        alt: "SWISH chrome wordmark on black for Adrian Swish at adrianswish.xyz",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+      },
+    ],
   },
 };
 
